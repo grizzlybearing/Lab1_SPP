@@ -6,6 +6,7 @@ namespace TestPart
         [TestMethod]
         public void TestMethod1()
         {
+            Console.WriteLine("aaaaaaa");
         }
     }
 }
