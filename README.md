@@ -3,18 +3,19 @@
 
 Класс должен реализовывать следующий интерфейс:
 
-Copy
-public interface ITracer
-{
-    // вызывается в начале замеряемого метода
-    void StartTrace();​
-    
-    // вызывается в конце замеряемого метода 
-    void StopTrace();​
-    
-    // получить результаты измерений  
-    TraceResult GetTraceResult();
-}
+
+    public interface ITracer
+    {
+        // вызывается в начале замеряемого метода
+        void StartTrace();​
+        
+        // вызывается в конце замеряемого метода 
+        void StopTrace();​
+        
+        // получить результаты измерений  
+        TraceResult GetTraceResult();
+    }
+
 Структура TraceResult на усмотрение автора.
 
 Tracer должен собирать следующую информацию об измеряемом методе:
@@ -27,44 +28,45 @@ Tracer должен собирать следующую информацию о�
 
 Пример использования:
 
-Copy
-public class Foo
-{
-    private Bar _bar;
-    private ITracer _tracer;
 
-    internal Foo(ITracer tracer)
+    public class Foo
     {
-        _tracer = tracer;
-        _bar = new Bar(_tracer);
+        private Bar _bar;
+        private ITracer _tracer;
+    
+        internal Foo(ITracer tracer)
+        {
+            _tracer = tracer;
+            _bar = new Bar(_tracer);
+        }
+        
+        public void MyMethod()
+        {
+            _tracer.StartTrace();
+            ...
+            _bar.InnerMethod();
+            ...
+            _tracer.StopTrace();
+        }
+    }
+
+    public class Bar
+    {
+        private ITracer _tracer;
+    
+        internal Bar(ITracer tracer)
+        {
+            _tracer = tracer;
+        }
+        
+        public void InnerMethod()
+        {
+            _tracer.StartTrace();
+            ...
+            _tracer.StopTrace();
+        }
     }
     
-    public void MyMethod()
-    {
-        _tracer.StartTrace();
-        ...
-        _bar.InnerMethod();
-        ...
-        _tracer.StopTrace();
-    }
-}
-
-public class Bar
-{
-    private ITracer _tracer;
-
-    internal Bar(ITracer tracer)
-    {
-        _tracer = tracer;
-    }
-    
-    public void InnerMethod()
-    {
-        _tracer.StartTrace();
-        ...
-        _tracer.StopTrace();
-    }
-}
 Также должно подсчитываться общее время выполнения анализируемых методов в одном потоке.
 
 Результаты трассировки вложенных методов должны быть представлены в соответствующем месте в дереве результатов.
@@ -73,50 +75,51 @@ public class Bar
 
 Пример результата в JSON:
 
-Copy
-{
-    "threads": [
-        {
-            "id": "1",
-            "time": "42ms",
-            "methods": [
-                {
-                    "name": "MyMethod",
-                    "class": "Foo",
-                    "time": "15ms",
-                    "methods": [
-                        {
-                            "name": "InnerMethod",
-                            "class": "Bar",
-                            "time": "10ms",
-                            "methods": ...    
-                        }
-                    ]
-                },
+
+    {
+        "threads": [
+            {
+                "id": "1",
+                "time": "42ms",
+                "methods": [
+                    {
+                        "name": "MyMethod",
+                        "class": "Foo",
+                        "time": "15ms",
+                        "methods": [
+                            {
+                                "name": "InnerMethod",
+                                "class": "Bar",
+                                "time": "10ms",
+                                "methods": ...    
+                            }
+                        ]
+                    },
+                    ...
+                ]
+            },
+            {
+                "id": "2",
+                "time": "24ms"
                 ...
-            ]
-        },
-        {
-            "id": "2",
-            "time": "24ms"
-            ...
-        }
-    ]
-}
+            }
+        ]
+    }
 Пример результата в XML:
 
-Copy
-<root>
-    <thread id="1" time="42ms">
-        <method name="MyMethod" time="15ms" class="Foo">
-            <method name="InnerMethod" time="10ms" class="Bar"/>
-        </method>
-        ...
-    </thread>
-    <thread id="2" time="24ms">
-        ...
-    </thread>
-</root>
+
+    <root>
+        <thread id="1" time="42ms">
+            <method name="MyMethod" time="15ms" class="Foo">
+                <method name="InnerMethod" time="10ms" class="Bar"/>
+            </method>
+            ...
+        </thread>
+        <thread id="2" time="24ms">
+            ...
+        </thread>
+    </root>
+    
 Готовый результат (полученный JSON и XML) должен выводиться в консоль и записываться в файл. Для данных классов необходимо разработать общий интерфейс, допустимо создать один переиспользуемый класс, не зависящий от того, куда должен выводиться результат (см. Общие ошибки).
 
 Код лабораторной работы должен состоять из трех проектов:
