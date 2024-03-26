@@ -1,0 +1,93 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Uni\\SPP\\Lab1\\LibraryPart\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4FD96821-45D3-44EE-9359-380DCB66FF38}|..\\TestPart\\TestPart\\TestPart.csproj|d:\\uni\\spp\\lab1\\testpart\\testpart\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{493BF5B8-8ACB-4D74-8ACA-3EAAC01A9497}|..\\ConsolePart\\ConsolePart\\ConsolePart.csproj|d:\\uni\\spp\\lab1\\consolepart\\consolepart\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A065D0BF-D158-44CD-9521-36E9CBC681DE}|LibraryPart\\LibraryPart.csproj|d:\\uni\\spp\\lab1\\librarypart\\librarypart\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A065D0BF-D158-44CD-9521-36E9CBC681DE}|LibraryPart\\LibraryPart.csproj|solutionrelative:librarypart\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "D:\\Uni\\SPP\\Lab1\\TestPart\\TestPart\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "..\\TestPart\\TestPart\\UnitTest1.cs",
+              "ToolTip": "D:\\Uni\\SPP\\Lab1\\TestPart\\TestPart\\UnitTest1.cs",
+              "RelativeToolTip": "..\\TestPart\\TestPart\\UnitTest1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T09:55:30.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Uni\\SPP\\Lab1\\ConsolePart\\ConsolePart\\Program.cs",
+              "RelativeDocumentMoniker": "..\\ConsolePart\\ConsolePart\\Program.cs",
+              "ToolTip": "D:\\Uni\\SPP\\Lab1\\ConsolePart\\ConsolePart\\Program.cs",
+              "RelativeToolTip": "..\\ConsolePart\\ConsolePart\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T09:55:27.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\Uni\\SPP\\Lab1\\LibraryPart\\LibraryPart\\Class1.cs",
+              "RelativeDocumentMoniker": "LibraryPart\\Class1.cs",
+              "ToolTip": "D:\\Uni\\SPP\\Lab1\\LibraryPart\\LibraryPart\\Class1.cs",
+              "RelativeToolTip": "LibraryPart\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T14:55:22.623Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
